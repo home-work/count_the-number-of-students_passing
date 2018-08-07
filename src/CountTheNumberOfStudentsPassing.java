@@ -16,6 +16,7 @@ public class CountTheNumberOfStudentsPassing {
 
         //Nhập điểm cho sinh viên
         int[] pointOfStudent = new int[numberOfStudents];
+        int count = 0;
         for (int i = 0; i < pointOfStudent.length; i++) {
             do {
                 System.out.println("Nhập vào điểm sinh viên thứ " + (i + 1));
@@ -23,16 +24,13 @@ public class CountTheNumberOfStudentsPassing {
                 if (pointOfStudent[i] < 0 || pointOfStudent[i] > 10) {
                     System.out.println("Nhập lại điểm của sinh viên thứ " + (i + 1));
                 }
+                if (pointOfStudent[i] >= 5) {
+                    count++;
+                }
             } while (pointOfStudent[i] < 0 || pointOfStudent[i] > 10);
         }
 
         //Hiển thị số lượng sinh viên đã thi đỗ
-        int count = 0;
-        for (int i = 0; i < pointOfStudent.length; i++) {
-            if (pointOfStudent[i] >= 5) {
-                count++;
-            }
-        }
         System.out.println("Số lượng sinh viên thi đỗ là: " + count);
 
     }
