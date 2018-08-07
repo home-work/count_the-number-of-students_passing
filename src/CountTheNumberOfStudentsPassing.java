@@ -26,6 +26,14 @@ public class CountTheNumberOfStudentsPassing {
             } while (pointOfStudent[i] < 0 || pointOfStudent[i] > 10);
         }
 
+        //Hiển thị số lượng sinh viên đã thi đỗ
+        int count = 0;
+        for (int i = 0; i < pointOfStudent.length; i++) {
+            if (pointOfStudent[i] >= 5) {
+                count++;
+            }
+        }
+        System.out.println("Số lượng sinh viên thi đỗ là: " + count);
 
     }
 }
